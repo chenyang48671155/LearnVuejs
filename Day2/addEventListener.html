@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>addEventListener</title>
+</head>
+<body>
+    <button>click one</button>
+    <button>click two</button>
+    <script>
+    var btnList=document.getElementsByTagName("button");
+    btnList[0].onclick = function(){
+        console.log("how are you!");
+        console.log(this.onclick);//function
+    }
+    btnList[1].addEventListener("click",function(){
+        console.log("I am fine,thank you!");
+        console.log("this.onclick");//null
+    })
+    </script>
+</body>
+</html>
